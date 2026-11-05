@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Molt Cara Companyona · The Historian's Notebook, Season 1</title>
+<meta name="description" content="Season 1 of The Historian's Notebook: 182 episodes, one document a day from the chancery registers of Joan I of Aragon and Violant de Bar, 1387.">
+<meta name="theme-color" content="#355145">
+<meta property="og:title" content="Molt Cara Companyona">
+<meta property="og:description" content="182 episodes, one document a day from the chancery registers of Joan I of Aragon and Violant de Bar, 1387.">
+<meta property="og:image" content="assets/folio-17v.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Alegreya+SC:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  // Decide motion before first paint: saved choice wins, otherwise the OS setting.
+  (function () {
+    var m = null;
+    try { m = localStorage.getItem('mcc-motion'); } catch (e) {}
+    var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (m === 'off' || (m === null && reduced)) document.documentElement.classList.add('still');
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#episodes">Skip to the episode calendar</a>
+
+<div class="toggles" role="group" aria-label="Page settings">
+  <button type="button" class="toggle" id="toggleLoupe" aria-pressed="true">Loupe on</button>
+  <button type="button" class="toggle" id="toggleMotion" aria-pressed="true">Motion on</button>
+</div>
+
+<header class="hero" id="top">
+  <div class="hero__sheet">
+    <h1 class="hero__script" id="heroScript">
+      <span class="visually-hidden">Molt cara companyona</span>
+      <img class="hero__fallback" src="assets/molt-cara-companyona.svg" alt="" aria-hidden="true">
+    </h1>
+    <svg class="quill" id="heroQuill" viewBox="0 0 60 120" aria-hidden="true"><use href="#quillShape"/></svg>
+  </div>
+  <div class="hero__text">
+    <p class="hero__gloss"><span class="gloss-mark">“My very dear companion”</span> was Joan I of Aragon’s habitual way of naming Violant de Bar. The script above is traced from the manuscript.</p>
+    <p class="hero__series">The Historian’s Notebook, season one</p>
+    <p class="hero__lede">182 episodes. Each one reads a single document from the chancery registers of the Crown of Aragon, one for every day from Christmas, when the chancery’s year 1387 began, to midsummer.</p>
+    <p class="hero__actions">
+      <a class="btn btn--solid" href="https://jonathanseyfried.net/historians-notebook-s1">Listen to the season</a>
+      <a class="btn" href="#letter">Read one letter</a>
+    </p>
+  </div>
+</header>
+
+<main>
+  <section class="intro" aria-labelledby="introTitle">
+    <h2 id="introTitle">How history gets made, one day at a time</h2>
+    <p>In January 1387 Joan became king and Violant, at twenty-three, became queen. Their secretaries copied outgoing letters into the registers now kept at the Arxiu de la Corona d’Aragó in Barcelona. Each episode of <cite>Molt Cara Companyona</cite> takes one of those letters on its own date and works through it in the open: the handwriting, the translation, the guesswork, and the questions that remain.</p>
+    <p>The episodes are short and daily for a reason. As the season’s notes put it, “I want to bring listeners into the process of how history is made.” The show’s motto is <em>dissatisfaction guaranteed</em>: a good reading of the past ends with better questions, not with everything answered.</p>
+  </section>
+
+  <!-- SCENE 1: the letter of 30 April 1387 -->
+  <section class="scene scene--letter" id="letter" aria-labelledby="letterTitle">
+    <div class="stage">
+      <div class="stage__head">
+        <h2 id="letterTitle">Tuesday, 30 April 1387</h2>
+        <p>Episode 127. Violant to the Crown’s ambassadors at the papal court. <span class="ref">ACA, Cancillería, Registros, núm. 2037, f. 17v</span></p>
+      </div>
+      <div class="letter">
+        <div class="folio" id="folio">
+          <canvas class="folio__canvas" id="folioCanvas" aria-hidden="true"></canvas>
+          <svg class="folio__marks" id="folioMarks" viewBox="0 0 1040 1463" aria-hidden="true"></svg>
+          <svg class="quill quill--folio" id="folioQuill" viewBox="0 0 60 120" aria-hidden="true"><use href="#quillShape"/></svg>
+          <div class="loupe" id="loupe" aria-hidden="true">
+            <canvas id="loupeCanvas" width="460" height="460"></canvas>
+          </div>
+          <div class="slip" id="slip" aria-hidden="true"><span class="slip__n"></span><span class="slip__t"></span></div>
+          <img class="folio__noscript" src="assets/folio-17v.jpg" alt="Folio 17v of ACA Cancillería register 2037: the second page of Violant's letter of 30 April 1387, written in a Gothic secretarial hand in Catalan.">
+        </div>
+        <div class="reading" id="reading">
+          <ol class="hours" id="hours" aria-label="The forty-eight hours the letter describes"></ol>
+          <div class="passage">
+            <h3 class="passage__head" id="passageHead">Two days after the king nearly died</h3>
+            <p class="passage__en" id="passageEn">On Sunday evening Joan collapsed and received the last rites. By Tuesday he was recovering, and Violant wrote to the Crown’s ambassadors in Avignon. This page continues from the recto. Scroll, and the scribe writes it out line by line, with the English beside it.</p>
+            <p class="passage__ca" id="passageCa" lang="ca"></p>
+          </div>
+          <div class="glosses" id="glosses"></div>
+        </div>
+      </div>
+      <p class="stage__foot" id="letterFoot">Transcription and translation from the episode’s reconciled edition; uncertain readings are marked [?]. Line divisions follow the manuscript.</p>
+    </div>
+  </section>
+
+  <section class="interlude" aria-label="About the letter">
+    <p>Why does this letter matter? In the episode’s words, “their level of co-rule was exceptional.” Joan’s illness kept him from fully functioning as a monarch, so he depended on Violant to fill the gap; she depended on him staying alive to keep their rule legally intact. Here she is the authoritative source on the condition of the king’s body, and the one telling the ambassadors to hold their ground.</p>
+    <details class="fulltext" id="fullText">
+      <summary>Read the whole page: transcription and translation</summary>
+      <div class="ft-cols">
+        <ol class="ft-ca" lang="ca"></ol>
+        <div class="ft-en"></div>
+      </div>
+    </details>
+    <p><a class="btn" href="https://jonathanseyfried.net/historians-notebook-s1-episodes/e127-apr30">Listen to episode 127</a></p>
+  </section>
+
+  <!-- SCENE 2: the map -->
+  <section class="scene scene--map" id="map" aria-labelledby="mapTitleH">
+    <div class="stage stage--map">
+      <div class="stage__head">
+        <h2 id="mapTitleH">Where the letters went</h2>
+        <p class="map-date" id="mapDate" aria-live="off"></p>
+      </div>
+      <div class="chart" id="chart">
+        <div class="chart__svg" id="chartSvg"></div>
+        <div class="tip" id="mapTip" role="dialog" aria-label="Letters to this place" hidden></div>
+      </div>
+      <div class="captions" id="captions">
+        <div class="cap" data-cap="0"><h3>The world of the letters</h3><p>Coastlines are modern, drawn the way Mallorcan chartmakers drew theirs, with wind lines fanning out across the sea. The Catalan Atlas, made in Palma around 1375, ended up in the French royal library. Scholars still argue over whether Joan was the one who sent it.</p></div>
+        <div class="cap" data-cap="1"><h3>Violant’s road south</h3><p>Violant was born a princess of Bar and spent most of her childhood at the court of her uncle, the King of France. In 1380, at about fifteen, she married Joan, heir to the Crown of Aragon. The marriage tied the court to France.</p></div>
+        <div class="cap" data-cap="2"><h3>One letter, 30 April 1387</h3><p>From Barcelona to the papal court at Avignon: the king is recovering, so stay at your post, whatever you hear.</p></div>
+        <div class="cap" data-cap="3"><h3>182 episodes, in date order</h3><p id="capCount">Now every letter in the season, in date order, plotted at the seat of the person it was sent to.</p></div>
+        <div class="cap" data-cap="4"><h3>Most business stayed close</h3><p>Officials in Zaragoza, Valencia and Lleida, the governor of Mallorca, the towns of Catalonia: the daily work of the registers ran through the Crown’s own lands.</p></div>
+        <div class="cap" data-cap="5"><h3>Every place, every letter</h3><p id="capEnd">Hover over or tap a place to see the episodes that wrote to it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="episodes" id="episodes" aria-labelledby="epTitle">
+    <h2 id="epTitle">Every day of the season</h2>
+    <p class="episodes__lede">Each square is a day and an episode. Filled squares are documents issued in Violant’s name, outlined squares are Joan’s, and dotted squares are someone else’s or unclear. Choose one to read what it’s about.</p>
+    <div class="filters" role="group" aria-label="Filter episodes">
+      <button type="button" class="chip" data-f="all" aria-pressed="true">Everyone</button>
+      <button type="button" class="chip" data-f="v" aria-pressed="false">Violant</button>
+      <button type="button" class="chip" data-f="j" aria-pressed="false">Joan</button>
+      <span class="filters__tag" id="tagFilter" hidden></span>
+    </div>
+    <div class="cal-wrap">
+      <div class="cal" id="cal"></div>
+      <article class="ep-card" id="epCard" aria-live="polite"></article>
+    </div>
+  </section>
+
+  <section class="host" aria-labelledby="hostTitle">
+    <h2 id="hostTitle">Your host</h2>
+    <p>Jonathan Seyfried is a historian and doctoral student at the University of New Mexico. His dissertation studies Joan I and Violant de Bar: gendered criticism, political authority, and the spread of French culture at the late medieval court of the Crown of Aragon. He reads the registers in their original Gothic secretarial hand, in Latin and Catalan.</p>
+    <ul class="links">
+      <li><a href="https://jonathanseyfried.net/">jonathanseyfried.net</a></li>
+      <li><a href="https://jonathanseyfried.net/historians-notebook-s1">All Season 1 episodes</a></li>
+      <li><a href="https://jonathanseyfried.net/historians-notebook-s1/s1-lesson-plan">Lesson plan for teachers</a></li>
+      <li><a href="https://jonathanseyfried.net/historians-notebook-s1/s1-faqs">Season 1 FAQs</a></li>
+      <li><a href="https://bsky.app/profile/jonathanseyfried.bsky.social">Bluesky</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Manuscript images: Arxiu de la Corona d’Aragó, Cancillería, Registros, via PARES (Archivos Estatales, Ministerio de Cultura). Coastlines: Natural Earth. Header script traced from the season artwork.</p>
+  <p><a href="#top">Back to the top</a></p>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="quillShape" viewBox="0 0 60 120">
+      <path d="M8 118 C10 104 15 88 22 70 C30 48 41 25 57 3 C52 22 46 40 38 58 C33 70 27 82 21 92 C17 99 12 108 8 118 Z" fill="currentColor" opacity=".92"/>
+      <path d="M8 118 L23 76" stroke="var(--vellum, #e6e3c8)" stroke-width="1.2" fill="none" opacity=".7"/>
+      <path d="M5 120 L9 111 L12 113 Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="data/letter.js"></script>
+<script src="data/episodes.js"></script>
+<script src="data/places.js"></script>
+<script src="js/core.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/letter.js"></script>
+<script src="js/map.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>
